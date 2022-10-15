@@ -1,0 +1,149 @@
+--- 
+title: Data Science for Business
+institute: "AMAT"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+always_allow_html: true
+---
+
+# BIENVENIDA {-}
+
+## Objetivo {-}
+
+Brindar al participante un amplio conocimiento de los requisitos, alcances y toma de decisión alrededor de un proyecto de Ciencia de Datos desde su planteamiento del problema y hasta su implementación en campañas preventivas. Se obtendrán los elementos básicos para poder dirigir a un equipo técnico que resuelve problemas a partir de datos y aprenderá a tomar decisiones al trabajar con proveedores o clientes que ofrezcan o requieran esta clase de servicios analíticos.
+
+## Alcances del curso {-}
+
+El participante conocerá los conceptos teóricos alrededor de esta ciencia y sabrá plantear los objetivos, alcances y análisis de un proyecto que tiene por propósito tomar acciones informadas a partir de la evidencia en los datos. Conocerá los modelos predictivos de Machine Learning, sus alcances y aplicaciones de mayor impacto en la industria. Finalmente, sabrá tomar decisiones sobre el correcto uso e implementación de los modelos para aumentar el beneficio comercial dentro de la institución.
+
+
+## Instructores {-} 
+
+**ACT. ARTURO BRINGAS** 
+
+**LinkedIn:** [arturo-bringas](https://www.linkedin.com/in/arturo-bringas/)
+**Email:** act.arturo.b@ciencias.unam.mx
+
+Actuario egresado de la Facultad de Ciencias con maestría en Ciencia de Datos por el ITAM. 
+Se especializa en modelos predictivos y de clasificación de *machine learning* aplicado a seguros, marketing, deportes, e-commerce y movilidad internacional. Ha sido consultor *Senior Data Scientist* para empresas y organizaciones como GNP, El Universal, UNAM, la Organización de las Naciones Unidas Contra la Droga y el Delito (UNODC), Sinnia, entre otros. Actualmente es profesor de *Ciencia de datos y Machine Learning* en AMAT. Es colaborador del Laboratorio Nacional de Observación de la Tierra (LANOT) y jefe de estadística en el Departamento de Investigación Aplicada y Opinión de la UNAM, donde realiza estudios nacionales de impacto social.
+
+```{r echo=FALSE,fig.align='center'}
+knitr::include_graphics("img/00-presentacion/arturo.png")
+```
+
+**ACT. KARINA LIZETTE GAMBOA** 
+
+**LinkedIn:** [KaLizzyGam ](https://www.linkedin.com/in/kalizzygam/)
+**Email:**  lizzygamboa@ciencias.unam.mx
+
+Actuaria egresada de la Facultad de Ciencias y candidata a Maestra en
+Ciencia de Datos por el ITAM.
+
+Experiencia en áreas de analítica predictiva e inteligencia del negocio. Lead y Senior
+Data Scientist en consultoría en diferentes sectores como tecnología, asegurador,
+financiero y bancario. Es experta en entendimiento de negocio para la correcta
+implementación de algoritmos de inteligencia y explotación de datos.
+Actualmente se desarrolla como Arquitecta de Soluciones Analíticas en Merama,
+startup mexicana clasificada como uno de los nuevos unicornios de Latinoamérica.
+Senior Data Science en CLOSTER y como profesora del diplomado de Metodología
+de la Investigación Social por la UNAM así como instructora de cursos de Ciencia de
+Datos en AMAT.
+
+Empresas anteriores: GNP, Actinver Banco y Casa de Bolsa, PlayCity Casinos,
+RakenDataGroup Consulting, entre otros.
+
+```{r echo=FALSE,fig.align='center',  out.width='250pt'}
+knitr::include_graphics("img/00-presentacion/lizzy.png")
+```
+
+## Temario {-}
+
+* Introducción a Ciencia de Datos 
+  * ¿Qué es Ciencia de Datos?
+  * Objetivo de la ciencia de datos
+  * ¿Qué se requiere para hacer ciencia de datos?
+  * Tipos de problemas que se pueden resolver
+  * Tipos de algoritmos y aprendizaje 
+  
+  </br>
+
+* Ciclo de vida
+  * Ciclo de vida de un proyecto de Ciencia de Datos
+  * Taller de Scoping
+
+  </br>
+
+* Análisis Exploratorio
+  * GEDA / EDA
+  * Análisis y visualización
+
+  </br>
+
+* Machine Learning (Aprendizaje Supervisado)
+  * ML y algoritmos
+  * Sesgo y Varianza
+  * Estimación de errores
+  * Partición de datos
+  * Métricas de desempeño
+  * Algoritmos
+
+  </br>
+
+* Diseño de experimentos
+  * Diseño de experimentos para ML
+  * Estimación de utilidad
+  
+* Machine Learning (Aprendizaje NO Supervisado)
+  * Clustering
+  * K-means
+  * PAM
+  * BBSCAN
+
+  </br>
+
+
+### Requisitos {-}
+
+> Computadora con al menos 4Gb Ram. 
+
+> Interés en el análisis de datos
+
+> Interés en metodologías estadísticas y computacionales
+
+
+## Duración y evaluación del curso {-}
+
+* El programa tiene una duración de 22 hrs.
+
+* Las clases serán impartidas los días sábado, de 9:00 am a 1:00 pm 
+
+* Serán asignados ejercicios que el participante deberá resolver entre una semana y otra.
+
+
+::: {.infobox .note data-latex="{note}"}
+**"La gota abre la piedra, no por su fuerza sino por su constancia"**
+
+\- Ovidio
+:::
+
+## Recursos y dinámica de clase {-}
+
+En esta clase estaremos usando: 
+
+* Zoom [Clases](https://kumon.zoom.us/j/5455440751?pwd=dFlKSnZXV3lsVExvS3NNMVV1MVlZdz09)
+
+  - **Pulgar arriba:** Voy bien, estoy entendiendo! 
+  - **Pulgar abajo:** Eso no quedó muy claro
+  - **Mano arriba:** Quiero participar/preguntar o Ya estoy listo para iniciar 
+
+* [Notas de clase](https://acturio.github.io/amt22_aserta_intro2dsml/) 
+
+FINALMENTE... se dejarán ejercicios que serán clave para el éxito del aprendizaje de los capítulos, por lo que se trabajará en equipo para lograr adquirir el mayor aprendizaje.
+
+
+<div class="watermark"><img src="img/header.png" width="400"></div>
+
+
