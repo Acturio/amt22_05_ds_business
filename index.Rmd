@@ -139,7 +139,7 @@ En esta clase estaremos usando:
   - **Pulgar abajo:** Eso no quedó muy claro
   - **Mano arriba:** Quiero participar/preguntar o Ya estoy listo para iniciar 
 
-* [Notas de clase](https://acturio.github.io/amt22_aserta_intro2dsml/) 
+* [Notas de clase](https://acturio.github.io/amt22_05_ds_business/) 
 
 FINALMENTE... se dejarán ejercicios que serán clave para el éxito del aprendizaje de los capítulos, por lo que se trabajará en equipo para lograr adquirir el mayor aprendizaje.
 
