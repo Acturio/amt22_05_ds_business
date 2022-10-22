@@ -13,3 +13,13 @@ ciclo-de-un-proyecto
 taller-de-scoping
 data-maturity-framework
 scoping
+visualización
+eda-análisis-exploratorio-de-datos
+geda-análisis-exploratorio-de-datos-gráficos
+lo-que-no-se-debe-hacer
+principios-de-visualización
+principios-generales-del-diseño-analítico
+técnicas-de-visualización
+indicadores-de-calidad-gráfica
+gráficos-univariados
+gráficos-multivariados
