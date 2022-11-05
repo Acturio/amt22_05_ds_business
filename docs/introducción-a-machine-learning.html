@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 3 Introducción a Machine Learning | Data Science for Business</title>
+  <meta name="description" content="Capítulo 3 Introducción a Machine Learning | Data Science for Business" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 3 Introducción a Machine Learning | Data Science for Business" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 3 Introducción a Machine Learning | Data Science for Business" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="visualización.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><img src="img/amat-logo.png" width="280"></a></li|
+|:-:|  
+<center>Data Science for Business</center>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>BIENVENIDA</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#objetivo"><i class="fa fa-check"></i>Objetivo</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#alcances-del-curso"><i class="fa fa-check"></i>Alcances del curso</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#instructores"><i class="fa fa-check"></i>Instructores</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#temario"><i class="fa fa-check"></i>Temario</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#requisitos"><i class="fa fa-check"></i>Requisitos</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#duración-y-evaluación-del-curso"><i class="fa fa-check"></i>Duración y evaluación del curso</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#recursos-y-dinámica-de-clase"><i class="fa fa-check"></i>Recursos y dinámica de clase</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="conceptos-de-ciencia-de-datos.html"><a href="conceptos-de-ciencia-de-datos.html"><i class="fa fa-check"></i><b>1</b> Conceptos de Ciencia de Datos</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="conceptos-de-ciencia-de-datos.html"><a href="conceptos-de-ciencia-de-datos.html#qué-es-ciencia-de-datos"><i class="fa fa-check"></i><b>1.1</b> ¿Qué es Ciencia de Datos?</a>
+<ul>
+<li class="chapter" data-level="" data-path="conceptos-de-ciencia-de-datos.html"><a href="conceptos-de-ciencia-de-datos.html#definiendo-conceptos"><i class="fa fa-check"></i>Definiendo conceptos:</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="conceptos-de-ciencia-de-datos.html"><a href="conceptos-de-ciencia-de-datos.html#objetivos"><i class="fa fa-check"></i><b>1.2</b> Objetivos</a></li>
+<li class="chapter" data-level="1.3" data-path="conceptos-de-ciencia-de-datos.html"><a href="conceptos-de-ciencia-de-datos.html#requisitos-1"><i class="fa fa-check"></i><b>1.3</b> Requisitos</a></li>
+<li class="chapter" data-level="1.4" data-path="conceptos-de-ciencia-de-datos.html"><a href="conceptos-de-ciencia-de-datos.html#aplicaciones"><i class="fa fa-check"></i><b>1.4</b> Aplicaciones</a></li>
+<li class="chapter" data-level="1.5" data-path="conceptos-de-ciencia-de-datos.html"><a href="conceptos-de-ciencia-de-datos.html#tipos-de-algoritmos"><i class="fa fa-check"></i><b>1.5</b> Tipos de algoritmos</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="conceptos-de-ciencia-de-datos.html"><a href="conceptos-de-ciencia-de-datos.html#aprendizaje-supervisado"><i class="fa fa-check"></i><b>1.5.1</b> Aprendizaje supervisado</a></li>
+<li class="chapter" data-level="1.5.2" data-path="conceptos-de-ciencia-de-datos.html"><a href="conceptos-de-ciencia-de-datos.html#aprendizaje-no-supervisado"><i class="fa fa-check"></i><b>1.5.2</b> Aprendizaje no supervisado</a></li>
+<li class="chapter" data-level="1.5.3" data-path="conceptos-de-ciencia-de-datos.html"><a href="conceptos-de-ciencia-de-datos.html#aprendizaje-por-refuerzo"><i class="fa fa-check"></i><b>1.5.3</b> Aprendizaje por refuerzo</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="conceptos-de-ciencia-de-datos.html"><a href="conceptos-de-ciencia-de-datos.html#perfiles-de-un-equipo"><i class="fa fa-check"></i><b>1.6</b> Perfiles de un equipo</a>
+<ul>
+<li class="chapter" data-level="" data-path="conceptos-de-ciencia-de-datos.html"><a href="conceptos-de-ciencia-de-datos.html#ingeniero-de-datos"><i class="fa fa-check"></i>1) Ingeniero de datos</a></li>
+<li class="chapter" data-level="" data-path="conceptos-de-ciencia-de-datos.html"><a href="conceptos-de-ciencia-de-datos.html#decisor"><i class="fa fa-check"></i>2) Decisor</a></li>
+<li class="chapter" data-level="" data-path="conceptos-de-ciencia-de-datos.html"><a href="conceptos-de-ciencia-de-datos.html#analista"><i class="fa fa-check"></i>3) Analista</a></li>
+<li class="chapter" data-level="" data-path="conceptos-de-ciencia-de-datos.html"><a href="conceptos-de-ciencia-de-datos.html#analista-experto"><i class="fa fa-check"></i>4) Analista experto</a></li>
+<li class="chapter" data-level="" data-path="conceptos-de-ciencia-de-datos.html"><a href="conceptos-de-ciencia-de-datos.html#estadístico"><i class="fa fa-check"></i>5) Estadístico</a></li>
+<li class="chapter" data-level="" data-path="conceptos-de-ciencia-de-datos.html"><a href="conceptos-de-ciencia-de-datos.html#ingeniero-de-machine-learning"><i class="fa fa-check"></i>6) Ingeniero de Machine Learning</a></li>
+<li class="chapter" data-level="" data-path="conceptos-de-ciencia-de-datos.html"><a href="conceptos-de-ciencia-de-datos.html#científico-de-datos"><i class="fa fa-check"></i>7) Científico de Datos</a></li>
+<li class="chapter" data-level="" data-path="conceptos-de-ciencia-de-datos.html"><a href="conceptos-de-ciencia-de-datos.html#gerente-de-análisis-líder-de-ciencia-de-datos"><i class="fa fa-check"></i>8) Gerente de Análisis / Líder de Ciencia de Datos</a></li>
+<li class="chapter" data-level="" data-path="conceptos-de-ciencia-de-datos.html"><a href="conceptos-de-ciencia-de-datos.html#experto-cualitativo-científico-social"><i class="fa fa-check"></i>9) Experto Cualitativo / Científico Social</a></li>
+<li class="chapter" data-level="" data-path="conceptos-de-ciencia-de-datos.html"><a href="conceptos-de-ciencia-de-datos.html#investigador"><i class="fa fa-check"></i>10) Investigador</a></li>
+<li class="chapter" data-level="" data-path="conceptos-de-ciencia-de-datos.html"><a href="conceptos-de-ciencia-de-datos.html#extra-personal-adicional"><i class="fa fa-check"></i>Extra) Personal Adicional</a></li>
+<li class="chapter" data-level="" data-path="conceptos-de-ciencia-de-datos.html"><a href="conceptos-de-ciencia-de-datos.html#google-data-career-path"><i class="fa fa-check"></i>Google Data Career Path</a></li>
+</ul></li>
+<li class="chapter" data-level="1.7" data-path="conceptos-de-ciencia-de-datos.html"><a href="conceptos-de-ciencia-de-datos.html#flujo-de-trabajo-en-ml"><i class="fa fa-check"></i><b>1.7</b> Flujo de trabajo en <em>ML</em></a></li>
+<li class="chapter" data-level="1.8" data-path="conceptos-de-ciencia-de-datos.html"><a href="conceptos-de-ciencia-de-datos.html#ciclo-de-un-proyecto"><i class="fa fa-check"></i><b>1.8</b> Ciclo de un proyecto</a></li>
+<li class="chapter" data-level="1.9" data-path="conceptos-de-ciencia-de-datos.html"><a href="conceptos-de-ciencia-de-datos.html#taller-de-scoping"><i class="fa fa-check"></i><b>1.9</b> Taller de Scoping</a>
+<ul>
+<li class="chapter" data-level="1.9.1" data-path="conceptos-de-ciencia-de-datos.html"><a href="conceptos-de-ciencia-de-datos.html#data-maturity-framework"><i class="fa fa-check"></i><b>1.9.1</b> Data Maturity Framework</a></li>
+<li class="chapter" data-level="1.9.2" data-path="conceptos-de-ciencia-de-datos.html"><a href="conceptos-de-ciencia-de-datos.html#scoping"><i class="fa fa-check"></i><b>1.9.2</b> Scoping</a></li>
+<li class="chapter" data-level="" data-path="conceptos-de-ciencia-de-datos.html"><a href="conceptos-de-ciencia-de-datos.html#ejemplos"><i class="fa fa-check"></i>Ejemplos</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="visualización.html"><a href="visualización.html"><i class="fa fa-check"></i><b>2</b> Visualización</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="visualización.html"><a href="visualización.html#eda-análisis-exploratorio-de-datos"><i class="fa fa-check"></i><b>2.1</b> EDA: Análisis Exploratorio de Datos</a></li>
+<li class="chapter" data-level="2.2" data-path="visualización.html"><a href="visualización.html#geda-análisis-exploratorio-de-datos-gráficos"><i class="fa fa-check"></i><b>2.2</b> GEDA: Análisis Exploratorio de Datos Gráficos</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="visualización.html"><a href="visualización.html#lo-que-no-se-debe-hacer"><i class="fa fa-check"></i><b>2.2.1</b> Lo que no se debe hacer…</a></li>
+<li class="chapter" data-level="2.2.2" data-path="visualización.html"><a href="visualización.html#principios-de-visualización"><i class="fa fa-check"></i><b>2.2.2</b> Principios de visualización</a></li>
+<li class="chapter" data-level="2.2.3" data-path="visualización.html"><a href="visualización.html#principios-generales-del-diseño-analítico"><i class="fa fa-check"></i><b>2.2.3</b> Principios generales del diseño analítico:</a></li>
+<li class="chapter" data-level="2.2.4" data-path="visualización.html"><a href="visualización.html#técnicas-de-visualización"><i class="fa fa-check"></i><b>2.2.4</b> Técnicas de visualización:</a></li>
+<li class="chapter" data-level="2.2.5" data-path="visualización.html"><a href="visualización.html#indicadores-de-calidad-gráfica"><i class="fa fa-check"></i><b>2.2.5</b> Indicadores de calidad gráfica:</a></li>
+<li class="chapter" data-level="2.2.6" data-path="visualización.html"><a href="visualización.html#gráficos-univariados"><i class="fa fa-check"></i><b>2.2.6</b> Gráficos univariados:</a></li>
+<li class="chapter" data-level="2.2.7" data-path="visualización.html"><a href="visualización.html#gráficos-multivariados"><i class="fa fa-check"></i><b>2.2.7</b> Gráficos multivariados</a></li>
+<li class="chapter" data-level="" data-path="visualización.html"><a href="visualización.html#warning"><i class="fa fa-check"></i>¡ Warning !</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="introducción-a-machine-learning.html"><a href="introducción-a-machine-learning.html"><i class="fa fa-check"></i><b>3</b> Introducción a Machine Learning</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="introducción-a-machine-learning.html"><a href="introducción-a-machine-learning.html#análisis-supervisado-vs-no-supervisado"><i class="fa fa-check"></i><b>3.1</b> Análisis Supervisado vs No supervisado</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="introducción-a-machine-learning.html"><a href="introducción-a-machine-learning.html#regresión-vs-clasificación"><i class="fa fa-check"></i><b>3.1.1</b> Regresión vs clasificación</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="introducción-a-machine-learning.html"><a href="introducción-a-machine-learning.html#sesgo-vs-varianza"><i class="fa fa-check"></i><b>3.2</b> Sesgo vs varianza</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="introducción-a-machine-learning.html"><a href="introducción-a-machine-learning.html#errores-reducibles"><i class="fa fa-check"></i><b>3.2.1</b> Errores reducibles</a></li>
+<li class="chapter" data-level="3.2.2" data-path="introducción-a-machine-learning.html"><a href="introducción-a-machine-learning.html#error-irreducible"><i class="fa fa-check"></i><b>3.2.2</b> Error irreducible</a></li>
+<li class="chapter" data-level="3.2.3" data-path="introducción-a-machine-learning.html"><a href="introducción-a-machine-learning.html#balance-entre-sesgo-y-varianza-o-trade-off"><i class="fa fa-check"></i><b>3.2.3</b> Balance entre sesgo y varianza o Trade-off</a></li>
+<li class="chapter" data-level="3.2.4" data-path="introducción-a-machine-learning.html"><a href="introducción-a-machine-learning.html#error-total"><i class="fa fa-check"></i><b>3.2.4</b> Error total</a></li>
+<li class="chapter" data-level="3.2.5" data-path="introducción-a-machine-learning.html"><a href="introducción-a-machine-learning.html#overfitting"><i class="fa fa-check"></i><b>3.2.5</b> Overfitting</a></li>
+<li class="chapter" data-level="3.2.6" data-path="introducción-a-machine-learning.html"><a href="introducción-a-machine-learning.html#underfitting"><i class="fa fa-check"></i><b>3.2.6</b> Underfitting</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="introducción-a-machine-learning.html"><a href="introducción-a-machine-learning.html#partición-de-datos"><i class="fa fa-check"></i><b>3.3</b> Partición de datos</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="introducción-a-machine-learning.html"><a href="introducción-a-machine-learning.html#métodos-comunes-para-particionar-datos"><i class="fa fa-check"></i><b>3.3.1</b> Métodos comunes para particionar datos</a></li>
+<li class="chapter" data-level="3.3.2" data-path="introducción-a-machine-learning.html"><a href="introducción-a-machine-learning.html#conjunto-de-validación"><i class="fa fa-check"></i><b>3.3.2</b> Conjunto de validación</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="introducción-a-machine-learning.html"><a href="introducción-a-machine-learning.html#pre-procesamiento-de-datos"><i class="fa fa-check"></i><b>3.4</b> Pre-procesamiento de datos</a></li>
+<li class="chapter" data-level="3.5" data-path="introducción-a-machine-learning.html"><a href="introducción-a-machine-learning.html#ingeniería-de-datos"><i class="fa fa-check"></i><b>3.5</b> Ingeniería de datos</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="./"><img src="img/amat-logo.png" width="280"></a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Science for Business</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="introducción-a-machine-learning" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Capítulo 3</span> Introducción a Machine Learning<a href="introducción-a-machine-learning.html#introducción-a-machine-learning" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Como se había mencionado, el Machine Learning es una disciplina del campo de la
+Inteligencia Artificial que, a través de algoritmos, dota a los ordenadores de
+la capacidad de identificar patrones en datos para hacer predicciones. Este
+aprendizaje permite a los computadores realizar tareas específicas de forma
+autónoma.</p>
+<p>El término se utilizó por primera vez en 1959. Sin embargo, ha ganado relevancia
+en los últimos años debido al aumento de la capacidad de computación y al <em>BOOM</em>
+de los datos.</p>
+<p>Un algoritmo para computadoras puede ser pensado como una receta. Describe
+exactamente qué pasos se realizan uno tras otro. Los ordenadores no entienden
+las recetas de cocina, sino los lenguajes de programación: En ellos, el
+algoritmo se descompone en pasos formales (comandos) que el ordenador puede
+entender.</p>
+<p><img src="img/04-ml/WebQuest.gif" width="400pt" style="display: block; margin: auto;" /></p>
+<p>La cuestión no es solo saber para qué sirve el Machine Learning, sino que saber
+cómo funciona y cómo poder implementarlo en la industria para aprovecharse de
+sus beneficios. Hay ciertos pasos que usualmente se siguen para crear un modelo
+de Machine Learning. Estos son típicamente realizados por científicos de los
+datos que trabajan en estrecha colaboración con los profesionales de los
+negocios para los que se está desarrollando el modelo.</p>
+<ul>
+<li><strong>Seleccionar y preparar un conjunto de datos de entrenamiento</strong></li>
+</ul>
+<p>Los <strong>datos de entrenamiento</strong> son un conjunto de datos representativos de los
+datos que el modelo de Machine Learning ingerirá para resolver el problema que
+está diseñado para resolver.</p>
+<p>Los datos de entrenamiento deben prepararse adecuadamente: aleatorizados y
+comprobados en busca de desequilibrios o sesgos que puedan afectar al
+entrenamiento. También deben dividirse en dos subconjuntos: el <strong>subconjunto de
+entrenamiento</strong>, que se utilizará para entrenar el algoritmo, y el <strong>subconjunto
+de validación</strong>, que se utilizará para probarlo y perfeccionarlo.</p>
+<p><img src="img/04-ml/train-and-test.png" width="600pt" style="display: block; margin: auto;" /></p>
+<ul>
+<li><strong>Elegir un algoritmo para ejecutarlo en el conjunto de datos de
+entrenamiento</strong></li>
+</ul>
+<p>Este es uno de los pasos más importantes, ya que se debe elegir qué algoritmo
+utilizar, siendo este un conjunto de pasos de procesamiento estadístico. El tipo
+de algoritmo depende del tipo (supervisado o no supervisado), la cantidad de
+datos del conjunto de datos de entrenamiento y del tipo de problema que se debe
+resolver.</p>
+<p><img src="img/04-ml/armas-modelos.jpg" width="600pt" style="display: block; margin: auto;" /></p>
+<ul>
+<li><strong>Entrenamiento del algoritmo para crear el modelo</strong></li>
+</ul>
+<p>El entrenamiento del algoritmo es un proceso iterativo: implica ejecutar las
+variables a través del algoritmo, comparar el resultado con los resultados que
+debería haber producido, ajustar los pesos y los sesgos dentro del algoritmo que
+podrían dar un resultado más exacto, y ejecutar las variables de nuevo hasta que
+el algoritmo devuelva el resultado correcto la mayoría de las veces. El
+algoritmo resultante, entrenado y preciso, es el modelo de Machine Learning.</p>
+<p><img src="img/04-ml/entrenamiento.jpg" width="600pt" style="display: block; margin: auto;" /></p>
+<ul>
+<li><strong>Usar y mejorar el modelo</strong></li>
+</ul>
+<p>El paso final es utilizar el modelo con nuevos datos y, en el mejor de los
+casos, para que mejore en precisión y eficacia con el tiempo. De dónde procedan
+los nuevos datos dependerá del problema que se resuelva. Por ejemplo, un modelo
+de Machine Learning diseñado para identificar el spam ingerirá mensajes de
+correo electrónico, mientras que un modelo de Machine Learning que maneja una
+aspiradora robot ingerirá datos que resulten de la interacción en el mundo real
+con muebles movidos o nuevos objetos en la habitación.</p>
+<p><img src="img/04-ml/competencia.jpg" width="600pt" style="display: block; margin: auto;" /></p>
+<div id="análisis-supervisado-vs-no-supervisado" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Análisis Supervisado vs No supervisado<a href="introducción-a-machine-learning.html#análisis-supervisado-vs-no-supervisado" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Los algoritmos de Machine Learning se dividen en tres categorías, siendo las dos
+primeras las más comunes:</p>
+<p><img src="img/04-ml/ml2.png" width="750pt" height="500pt" style="display: block; margin: auto;" /></p>
+<ul>
+<li><strong>Aprendizaje supervisado</strong>: estos algoritmos cuentan con un aprendizaje
+previo basado en un sistema de etiquetas asociadas a unos datos que les
+permiten tomar decisiones o hacer predicciones.</li>
+</ul>
+<p>Algunos ejemplos son:</p>
+<pre><code>- Un detector de spam que etiqueta un e-mail como spam o no.
+
+- Predecir precios de casas
+
+- Clasificación de imagenes
+
+- Predecir el clima
+
+- ¿Quiénes son los clientes descontentos?</code></pre>
+<ul>
+<li><strong>Aprendizaje no supervisado:</strong> en el aprendizaje supervisado, la idea
+principal es aprender bajo supervisión, donde la señal de supervisión se
+nombra como valor objetivo o etiqueta. En el aprendizaje no supervisado,
+carecemos de este tipo de etiqueta. Por lo tanto, necesitamos encontrar
+nuestro camino sin ninguna supervisión ni guía. Esto simplemente significa
+que necesitamos descubrir qué es qué por nosotros mismos.</li>
+</ul>
+<p>Algunos ejemplos son:</p>
+<pre><code>- Encontrar segmentos de clientes.
+
+- Reducir la complejidad de un problema
+
+- Selección de variables
+
+- Encontrar grupos
+
+- Reducción de dimensionalidad</code></pre>
+<ul>
+<li><strong>Aprendizaje por refuerzo:</strong> su objetivo es que un algoritmo aprenda a
+partir de la propia experiencia. Esto es, que sea capaz de tomar la mejor
+decisión ante diferentes situaciones de acuerdo a un proceso de prueba y
+error en el que se recompensan las decisiones correctas.</li>
+</ul>
+<p>Algunos ejemplos son:</p>
+<pre><code>- Reconocimiento facial
+
+- Diagnósticos médicos
+
+- Clasificar secuencias de ADN</code></pre>
+<div id="regresión-vs-clasificación" class="section level3 hasAnchor" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> Regresión vs clasificación<a href="introducción-a-machine-learning.html#regresión-vs-clasificación" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Existen dos tipos principales de aprendizaje supervisado, esto depende del tipo
+de la variable respuesta:</p>
+<div id="clasificación-1" class="section level4 unnumbered hasAnchor">
+<h4>Clasificación<a href="introducción-a-machine-learning.html#clasificación-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>En el aprendizaje supervisado, los algoritmos de clasificación se usan cuando el
+resultado es una etiqueta discreta. Esto quiere decir que se utilizan cuando la
+respuesta se fundamenta en conjunto finito de resultados.</p>
+</div>
+<div id="regresión-1" class="section level4 unnumbered hasAnchor">
+<h4>Regresión<a href="introducción-a-machine-learning.html#regresión-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>El análisis de regresión es un subcampo del aprendizaje automático supervisado
+cuyo objetivo es establecer un método para la relación entre un cierto número de
+características y una variable objetivo continua.</p>
+<p><br/></p>
+<p><img src="img/04-ml/regresion_clasificacion.png" width="700pt" height="450pt" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+</div>
+<div id="sesgo-vs-varianza" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Sesgo vs varianza<a href="introducción-a-machine-learning.html#sesgo-vs-varianza" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>En el mundo de Machine Learning cuando desarrollamos un modelo nos esforzamos
+para hacer que sea lo más preciso, ajustando los parámetros, pero la realidad es
+que no se puede construir un modelo 100% preciso ya que nunca pueden estar
+libres de errores.</p>
+<p>Comprender cómo las diferentes fuentes de error generan sesgo y varianza nos
+ayudará a mejorar el proceso de ajuste de datos, lo que resulta en modelos más
+precisos, adicionalmente también evitará el error de sobre-ajuste y falta de
+ajuste.</p>
+<div id="errores-reducibles" class="section level3 hasAnchor" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> Errores reducibles<a href="introducción-a-machine-learning.html#errores-reducibles" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Error por sesgo:</strong></li>
+</ul>
+<p>Es la diferencia entre la predicción esperada de nuestro modelo y los valores
+verdaderos. Aunque al final nuestro objetivo es siempre construir modelos que
+puedan predecir datos muy cercanos a los valores verdaderos, no siempre es tan
+fácil porque algunos algoritmos son simplemente demasiado rígidos para aprender
+señales complejas del conjunto de datos.</p>
+<p>Imagina ajustar una regresión lineal a un conjunto de datos que tiene un patrón
+no lineal, no importa cuántas observaciones más recopiles, una regresión lineal
+no podrá modelar las curvas en esos datos. Esto se conoce como <em>underfitting</em>.</p>
+<ul>
+<li><strong>Error por varianza:</strong></li>
+</ul>
+<p>Se refiere a la cantidad que la estimación de la función objetivo cambiará si se
+utiliza diferentes datos de entrenamiento. La función objetivo se estima a
+partir de los datos de entrenamiento mediante un algoritmo de Machine Learning,
+por lo que deberíamos esperar que el algoritmo tenga alguna variación.
+Idealmente no debería cambiar demasiado de un conjunto de datos de entrenamiento
+a otro.</p>
+<p><img src="img/04-ml/3-1-3-biasvar.png" width="650pt" height="350pt" style="display: block; margin: auto;" /></p>
+<p>Los algoritmos de Machine Learning que tienen una gran varianza están
+fuertemente influenciados por los detalles de los datos de entrenamiento, esto
+significa que los detalles de la capacitación influyen en el número y los tipos
+de parámetros utilizados para caracterizar la función de mapeo.</p>
+</div>
+<div id="error-irreducible" class="section level3 hasAnchor" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> Error irreducible<a href="introducción-a-machine-learning.html#error-irreducible" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>El error irreducible no se puede reducir, independientemente de qué algoritmo se
+usa. También se le conoce como ruido y, por lo general, proviene por factores
+como variables desconocidas que influyen en el mapeo de las variables de entrada
+a la variable de salida, un conjunto de características incompleto o un problema
+mal enmarcado. Acá es importante comprender que no importa cuán bueno hagamos
+nuestro modelo, nuestros datos tendrán cierta cantidad de ruido o un error
+irreductible que no se puede eliminar.</p>
+</div>
+<div id="balance-entre-sesgo-y-varianza-o-trade-off" class="section level3 hasAnchor" number="3.2.3">
+<h3><span class="header-section-number">3.2.3</span> Balance entre sesgo y varianza o Trade-off<a href="introducción-a-machine-learning.html#balance-entre-sesgo-y-varianza-o-trade-off" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>El objetivo de cualquier algoritmo supervisado de Machine Learning es lograr un
+sesgo bajo, una baja varianza y a su vez el algoritmo debe lograr un buen
+rendimiento de predicción.</p>
+<p><img src="img/04-ml/3-1-3-tradeoff.jpeg" width="650pt" height="450pt" style="display: block; margin: auto;" /></p>
+<p>El sesgo frente a la varianza se refiere a la precisión frente a la consistencia
+de los modelos entrenados por su algoritmo. Podemos diagnosticarlos de la
+siguiente manera:</p>
+<p><img src="img/04-ml/3-1-3-altobias.jpeg" width="650pt" height="350pt" style="display: block; margin: auto;" /></p>
+<p>Los algoritmos de baja varianza (alto sesgo) tienden a ser menos complejos, con
+una estructura subyacente simple o rígida.</p>
+<p><img src="img/04-ml/3-1-3-bajobias.jpeg" width="650pt" height="350pt" style="display: block; margin: auto;" /></p>
+<p>Los algoritmos de bajo sesgo (alta varianza) tienden a ser más complejos, con
+una estructura subyacente flexible.</p>
+<p>No hay escapatoria a la relación entre el sesgo y la varianza en Machine
+Learning, aumentar el sesgo disminuirá la varianza, aumentar la varianza
+disminuirá el sesgo.</p>
+</div>
+<div id="error-total" class="section level3 hasAnchor" number="3.2.4">
+<h3><span class="header-section-number">3.2.4</span> Error total<a href="introducción-a-machine-learning.html#error-total" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Comprender el sesgo y la varianza es fundamental para comprender el
+comportamiento de los modelos de predicción, pero en general lo que realmente
+importa es el error general, no la descomposición específica. El punto ideal
+para cualquier modelo es el nivel de complejidad en el que el aumento en el
+sesgo es equivalente a la reducción en la varianza.</p>
+<p>Para construir un buen modelo, necesitamos encontrar un buen equilibrio entre el
+sesgo y la varianza de manera que minimice el error total.</p>
+<p><img src="img/04-ml/3-1-3-biasvar.png" width="650pt" height="350pt" style="display: block; margin: auto;" /></p>
+</div>
+<div id="overfitting" class="section level3 hasAnchor" number="3.2.5">
+<h3><span class="header-section-number">3.2.5</span> Overfitting<a href="introducción-a-machine-learning.html#overfitting" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>El modelo es muy particular.</p></li>
+<li><p>Error debido a la varianza</p></li>
+<li><p>Durante el entrenamiento tiene un desempeño muy bueno, pero al pasar nuevos
+datos su desempeño es malo.</p></li>
+</ul>
+</div>
+<div id="underfitting" class="section level3 hasAnchor" number="3.2.6">
+<h3><span class="header-section-number">3.2.6</span> Underfitting<a href="introducción-a-machine-learning.html#underfitting" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>El modelo es demasiado general.</p></li>
+<li><p>Error debido al sesgo.</p></li>
+<li><p>Durante el entrenamiento no tiene un buen desempeño.</p></li>
+</ul>
+<p><img src="img/04-ml/over-under.jpg" width="600pt" height="350pt" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="partición-de-datos" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Partición de datos<a href="introducción-a-machine-learning.html#partición-de-datos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Cuando hay una gran cantidad de datos disponibles, una estrategia inteligente es
+asignar subconjuntos específicos de datos para diferentes tareas, en lugar de
+asignar la mayor cantidad posible solo a la estimación de los parámetros del
+modelo.</p>
+<p>Si el conjunto inicial de datos no es lo suficientemente grande, habrá cierta
+superposición de cómo y cuándo se asignan nuestros datos, y es importante contar
+con una metodología sólida para la partición de datos.</p>
+<div id="métodos-comunes-para-particionar-datos" class="section level3 hasAnchor" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> Métodos comunes para particionar datos<a href="introducción-a-machine-learning.html#métodos-comunes-para-particionar-datos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>El enfoque principal para la validación del modelo es dividir el conjunto de
+datos existente en dos conjuntos distintos:</p>
+<ul>
+<li><p><strong>Entrenamiento:</strong> Este conjunto suele contener la mayoría de los datos, los
+cuales sirven para la construcción de modelos donde se pueden ajustar
+diferentes modelos, se investigan estrategias de ingeniería de
+características, etc.</p>
+<p>La mayor parte del proceso de modelado se utiliza este conjunto.</p></li>
+<li><p><strong>Prueba:</strong> La otra parte de las observaciones se coloca en este conjunto.
+Estos datos se mantienen en reserva hasta que se elijan uno o dos modelos
+como los de mejor rendimiento.</p>
+<p>El conjunto de prueba se utiliza como árbitro final para determinar la
+eficiencia del modelo, por lo que es fundamental mirar el conjunto de prueba
+una sola vez.</p></li>
+</ul>
+<p>Supongamos que asignamos el <span class="math inline">\(80\%\)</span> de los datos al conjunto de entrenamiento y
+el <span class="math inline">\(20\%\)</span> restante a las pruebas. El método más común es utilizar un muestreo
+aleatorio simple. El muestreo aleatorio simple es apropiado en muchos casos, pero hay excepciones.</p>
+<p>Cuando hay un desbalance de clases en los problemas de clasificación, el uso de
+una muestra aleatoria simple puede asignar al azar estas muestras poco
+frecuentes de manera desproporcionada al conjunto de entrenamiento o prueba.</p>
+<p>Para evitar esto, se puede utilizar un muestreo estratificado. La división de
+entrenamiento/prueba se lleva a cabo por separado dentro de cada clase y luego
+estas submuestras se combinan en el conjunto general de entrenamiento y prueba.</p>
+<p>Para los problemas de regresión, los datos de los resultados se pueden agrupar
+artificialmente en cuartiles y luego realizar un muestreo estratificado cuatro
+veces por separado. Este es un método eficaz para mantener similares las
+distribuciones del resultado entre el conjunto de entrenamiento y prueba.</p>
+<p><img src="amt22_05_ds_business_files/figure-html/unnamed-chunk-90-1.png" width="672" /></p>
+<p>Observamos que la distribución del precio de venta está sesgada a la derecha.
+Las casas más caras no estarían bien representadas en el conjunto de
+entrenamiento con una simple partición; esto aumentaría el riesgo de que nuestro
+modelo sea ineficaz para predecir el precio de dichas propiedades.</p>
+<p>Las líneas verticales punteadas indican los cuatro cuartiles para estos datos.
+Una muestra aleatoria estratificada llevaría a cabo la división 80/20 dentro de
+cada uno de estos subconjuntos de datos y luego combinaría los resultados.</p>
+<p><strong>Hay muy pocas desventajas en el uso de muestreo estratificado.</strong></p>
+<p>Un caso es cuando los datos tienen un componente de tiempo, como los datos de
+series de tiempo. Aquí, es más común utilizar los datos más recientes como
+conjunto de prueba.</p>
+<div id="qué-proporción-debería-ser-usada" class="section level4 unnumbered hasAnchor">
+<h4>¿Qué proporción debería ser usada?<a href="introducción-a-machine-learning.html#qué-proporción-debería-ser-usada" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>No hay un porcentaje de división óptimo para el conjunto de entrenamiento y
+prueba. Muy pocos datos en el conjunto de entrenamiento obstaculizan la
+capacidad del modelo para encontrar estimaciones de parámetros adecuadas y muy
+pocos datos en el conjunto de prueba reducen la calidad de las estimaciones de
+rendimiento.</p>
+<p>Se debe elegir un porcentaje que cumpla con los objetivos de nuestro proyecto
+con consideraciones que incluyen:</p>
+<ul>
+<li>Costo computacional en el entrenamiento del modelo.</li>
+<li>Costo computacional en la evaluación del modelo.</li>
+<li>Representatividad del conjunto de formación.</li>
+<li>Representatividad del conjunto de pruebas.</li>
+</ul>
+<p>Los porcentajes de división más comunes comunes son:</p>
+<ul>
+<li>Entrenamiento: <span class="math inline">\(80\%\)</span>, Prueba: <span class="math inline">\(20\%\)</span></li>
+<li>Entrenamiento: <span class="math inline">\(67\%\)</span>, Prueba: <span class="math inline">\(33\%\)</span></li>
+<li>Entrenamiento: <span class="math inline">\(50\%\)</span>, Prueba: <span class="math inline">\(50\%\)</span></li>
+</ul>
+</div>
+</div>
+<div id="conjunto-de-validación" class="section level3 hasAnchor" number="3.3.2">
+<h3><span class="header-section-number">3.3.2</span> Conjunto de validación<a href="introducción-a-machine-learning.html#conjunto-de-validación" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>El conjunto de validación se definió originalmente cuando los investigadores se
+dieron cuenta de que medir el rendimiento del conjunto de entrenamiento conducía
+a resultados que eran demasiado optimistas.</p>
+<p>Esto llevó a modelos que se sobre-ajustaban, lo que significa que se
+desempeñaron muy bien en el conjunto de entrenamiento pero mal en el conjunto de
+prueba.</p>
+<p>Para combatir este problema, se retuvo un pequeño conjunto de datos de
+<em>validación</em> y se utilizó para medir el rendimiento del modelo mientras este
+está siendo entrenado. Una vez que la tasa de error del conjunto de validación
+comenzara a aumentar, la capacitación se detendría.</p>
+<p>En otras palabras, el conjunto de validación es un medio para tener una idea
+aproximada de qué tan bien se desempeñó el modelo antes del conjunto de prueba.</p>
+<p><img src="img/04-ml/3-5-3-conjunto-validacion.png" width="500pt" height="250pt" style="display: block; margin: auto;" /></p>
+<p>Los conjuntos de validación se utilizan a menudo cuando el conjunto de datos
+original es muy grande. En este caso, una sola partición grande puede ser
+adecuada para caracterizar el rendimiento del modelo sin tener que realizar
+múltiples iteraciones de remuestreo.</p>
+<p><img src="img/04-ml/3-5-3-conjunto-validacion-2.png" width="500pt" height="350pt" style="display: block; margin: auto;" /></p>
+<p>Esta función regresa una columna para los objetos de división de datos y una
+columna llamada id que tiene una cadena de caracteres con el identificador de
+remuestreo.</p>
+<p>El argumento de estratos hace que el muestreo aleatorio se lleve a cabo dentro
+de la variable de estratificación. Esto puede ayudar a garantizar que el número
+de datos en los datos del análisis sea equivalente a las proporciones del
+conjunto de datos original. (Los estratos inferiores al 10% del total se
+agrupan).</p>
+<p>Otra opción de muestreo bastante común es la realizada mediante múltiples
+submuestras de los datos originales.</p>
+<p><img src="img/04-ml/18_1_cross_validation.png" width="500pt" height="350pt" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="pre-procesamiento-de-datos" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Pre-procesamiento de datos<a href="introducción-a-machine-learning.html#pre-procesamiento-de-datos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Hay varios pasos que se deben de seguir para crear un modelo útil:</p>
+<ul>
+<li>Recopilación de datos.</li>
+<li>Limpieza de datos.</li>
+<li>Creación de nuevas variables.</li>
+<li>Estimación de parámetros.</li>
+<li>Selección y ajuste del modelo.</li>
+<li>Evaluación del rendimiento.</li>
+</ul>
+<p>Al comienzo de un proyecto, generalmente hay un conjunto finito de datos
+disponibles para todas estas tareas.</p>
+<p><strong>OJO:</strong> A medida que los datos se reutilizan para múltiples tareas, aumentan
+los riesgos de agregar sesgos o grandes efectos de errores metodológicos.</p>
+<p><img src="img/04-ml/3-2-1-preprocesamiento.png" width="800pt" height="200pt" style="display: block; margin: auto;" /></p>
+<p>Como punto de partida para nuestro flujo de trabajo de aprendizaje automático,
+necesitaremos datos de entrada. En la mayoría de los casos, estos datos se
+cargarán y almacenarán en forma de <em>data frames</em> o <em>tibbles</em> en R. Incluirán una
+o varias variables predictivas y, en caso de aprendizaje supervisado, también
+incluirán un resultado conocido.</p>
+<p>Sin embargo, no todos los modelos pueden lidiar con diferentes problemas de
+datos y, a menudo, necesitamos transformar los datos para obtener el mejor
+rendimiento posible del modelo. Este proceso se denomina pre-procesamiento y
+puede incluir una amplia gama de pasos, como:</p>
+<ul>
+<li><strong>Dicotomización de variables:</strong> Variables cualitativas que solo pueden
+tomar el valor <span class="math inline">\(0\)</span> o <span class="math inline">\(1\)</span> para indicar la ausencia o presencia de una
+condición específica. Estas variables se utilizan para clasificar los datos
+en categorías mutuamente excluyentes o para activar comandos de encendido /
+apagado</li>
+</ul>
+<p><img src="img/04-ml/hombre-mujer.jpg" width="400pt" height="200pt" style="display: block; margin: auto;" /><img src="img/04-ml/sino.jpg" width="400pt" height="200pt" style="display: block; margin: auto;" /></p>
+<ul>
+<li><strong>Near Zero Value (nzv) o Varianza Cero:</strong> En algunas situaciones, el
+mecanismo de generación de datos puede crear predictores que solo tienen un
+valor único (es decir, un “predictor de varianza cercando a cero”). Para
+muchos modelos (excluidos los modelos basados en árboles), esto puede hacer
+que el modelo se bloquee o que el ajuste sea inestable.</li>
+</ul>
+<p>De manera similar, los predictores pueden tener solo una pequeña cantidad de
+valores únicos que ocurren con frecuencias muy bajas.</p>
+<p><img src="img/04-ml/hombres.jpg" width="500pt" style="display: block; margin: auto;" /></p>
+<ul>
+<li><strong>Imputaciones:</strong> Si faltan algunos predictores, ¿deberían estimarse
+mediante imputación?</li>
+</ul>
+<p><img src="img/04-ml/imputar.jpg" width="400pt" style="display: block; margin: auto;" /></p>
+<ul>
+<li><strong>Des-correlacionar:</strong> Si hay predictores correlacionados, ¿debería
+mitigarse esta correlación? Esto podría significar filtrar predictores, usar
+análisis de componentes principales o una técnica basada en modelos (por
+ejemplo, regularización).</li>
+</ul>
+<p><img src="img/04-ml/descorrelaciones.jpg" width="400pt" style="display: block; margin: auto;" /></p>
+<ul>
+<li><strong>Normalizar:</strong> ¿Deben centrarse y escalar los predictores?</li>
+</ul>
+<p><img src="img/04-ml/estandarizar-reescalar.jpg" width="800pt" style="display: block; margin: auto;" /></p>
+<ul>
+<li><strong>Transformar:</strong> ¿Es útil transformar los predictores para que sean más
+simétricos? (por ejemplo, escala logarítmica).</li>
+</ul>
+<p>Dependiendo del caso de uso, algunos pasos de pre-procesamiento pueden ser
+indispensables para pasos posteriores, mientras que otros solo son opcionales.
+Sin embargo, dependiendo de los pasos de pre-procesamiento elegidos, el
+rendimiento del modelo puede cambiar significativamente en pasos posteriores.
+Por lo tanto, es muy común probar varias configuraciones.</p>
+</div>
+<div id="ingeniería-de-datos" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Ingeniería de datos<a href="introducción-a-machine-learning.html#ingeniería-de-datos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>La ingeniería de datos abarca actividades que dan formato a los valores de los
+predictores para que se puedan utilizar de manera eficaz para nuestro modelo.
+Esto incluye transformaciones y codificaciones de los datos para representar
+mejor sus características importantes.</p>
+<p>Por ejemplo:</p>
+<blockquote>
+<p><strong>1.-</strong> Supongamos que un conjunto de datos tiene dos predictores que se
+pueden representar de manera más eficaz en nuestro modelo como una proporción,
+así, tendríamos un nuevo predictor a partir de la proporción de los dos
+predictores originales.</p>
+</blockquote>
+<table class=" lightable-classic-2" style="font-family: &quot;Arial Narrow&quot;, &quot;Source Sans Pro&quot;, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:right;">
+X
+</th>
+<th style="text-align:right;">
+Proporción (X)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+691
+</td>
+<td style="text-align:right;">
+0.1836789
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+639
+</td>
+<td style="text-align:right;">
+0.1698565
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+969
+</td>
+<td style="text-align:right;">
+0.2575758
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+955
+</td>
+<td style="text-align:right;">
+0.2538543
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+508
+</td>
+<td style="text-align:right;">
+0.1350346
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>2.-</strong> Al elegir cómo codificar nuestros datos en el modelado, podríamos
+elegir una opción que creemos que está más asociada con el resultado. El
+formato original de los datos, por ejemplo numérico (edad) versus categórico
+(grupo).</p>
+</blockquote>
+<table class=" lightable-classic-2" style="font-family: &quot;Arial Narrow&quot;, &quot;Source Sans Pro&quot;, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:right;">
+Edad
+</th>
+<th style="text-align:left;">
+Grupo
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:left;">
+Niños
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+78
+</td>
+<td style="text-align:left;">
+Adultos mayores
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+17
+</td>
+<td style="text-align:left;">
+Adolescentes
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+25
+</td>
+<td style="text-align:left;">
+Adultos
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+90
+</td>
+<td style="text-align:left;">
+Adultos mayores
+</td>
+</tr>
+</tbody>
+</table>
+<p>La ingeniería y el pre-procesamiento de datos también pueden implicar el cambio
+de formato requerido por el modelo. Algunos modelos utilizan métricas de
+distancia geométrica y, en consecuencia, los predictores numéricos deben
+centrarse y escalar para que estén todos en las mismas unidades. De lo
+contrario, los valores de distancia estarían sesgados por la escala de cada
+columna.</p>
+
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+$('.pipehover_incremental tr').hover(function() {
+  $(this).removeClass()
+  $(this).prevAll().removeClass()
+  $(this).nextAll().removeClass()
+  $(this).addClass('hover');
+  $(this).prevAll().addClass('hover');
+  $(this).closest('div').next().find('img').attr("src", $(this).attr("link"));
+});
+
+
+$('.pipehover_select_one_row tr').hover(function() {
+  $(this).removeClass()
+  $(this).prevAll().removeClass()
+  $(this).nextAll().removeClass()
+  $(this).addClass('hover');
+  $(this).closest('div').next().find('img').attr("src", $(this).attr("link"));
+});
+
+</script>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="visualización.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["amt22_05_ds_business.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
